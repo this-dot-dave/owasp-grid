@@ -1,4 +1,47 @@
 <div>
-  <h1>{{ $ctrl.name }}</h1>
-  <h2>{{ $ctrl.riskData.title }}</h2>
+  <h1>{{ $ctrl.riskData.title }}</h1>
+
+  <table class="pure-table pure-table-horizontal">
+    <thead>
+        <tr>
+            <th> </th>
+            <th> </th>
+            <th>Attack Vector</th>
+            <th colspan="2">Security Weakness</th>
+            <th>Technical Impacts</th>
+        </tr>
+        <tr>
+            <th>
+            	#
+            </th>
+            <th>
+            	<a href="javascript://" ng-click="$ctrl.sortBy('rank')">Vulnerability</a><i ng-if="$ctrl.isSortedBy('rank')" class="material-icons">{{ $ctrl.getSortIcon() }}</i>
+            </th>
+            <th>
+            	<a href="javascript://" ng-click="$ctrl.sortBy('exploitability')">Exploitability</a><i ng-if="$ctrl.isSortedBy('exploitability')" class="material-icons">{{ $ctrl.getSortIcon() }}</i>
+            </th>
+            <th>
+            	<a href="javascript://" ng-click="$ctrl.sortBy('prevalence')">Prevalence</a><i ng-if="$ctrl.isSortedBy('prevalence')" class="material-icons">{{ $ctrl.getSortIcon() }}</i>
+            </th>
+            <th>
+            	<a href="javascript://" ng-click="$ctrl.sortBy('detectability')">Detectability</a><i ng-if="$ctrl.isSortedBy('detectability')" class="material-icons">{{ $ctrl.getSortIcon() }}</i>
+            </th>
+            <th>
+            	<a href="javascript://" ng-click="$ctrl.sortBy('impact')">Impact<a><i ng-if="$ctrl.isSortedBy('impact')" class="material-icons">{{ $ctrl.getSortIcon() }}</i>
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="risk in $ctrl.riskData.risks | orderBy : $ctrl.propertyName : $ctrl.isReversed">
+            <td>{{ risk.rank + 1 }}</td>
+            <td>{{ risk.title }}</td>
+            <td>{{ risk.exploitabilityLabel }}</td>
+            <td>{{ risk.prevalenceLabel }}</td>
+            <td>{{ risk.detectabilityLabel }}</td>
+            <td>{{ risk.impactLabel }}</td>
+        </tr>
+
+    </tbody>
+	</table>
 </div>
