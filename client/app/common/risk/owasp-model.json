@@ -6,311 +6,131 @@
       "rank": 0,
       "title": "A1 - Injection",
       "description": "Injection flaws, such as SQL, OS, XXE, and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query. The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Common",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Severe",
-          "severity": 1
-        }
-      ]
+      "exploitability": 1,
+      "exploitabilityLabel": "Easy",
+      "prevalence": 2,
+      "prevalenceLabel": "Common",
+      "detectability": 2,
+      "detectabilityLabel": "Average",
+      "impact": 1,
+      "impactLabel": "Severe"
     },
     {
       "rank": 1,
       "title": "A2 – Broken Authentication and Session Management",
       "description": "Application functions related to authentication and session management are often implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation flaws to assume other users’ identities (temporarily or permanently).",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Common",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Severe",
-          "severity": 1
-        }
-      ]
+      "exploitability": 1,
+      "exploitabilityLabel": "Easy",
+      "prevalence": 2,
+      "prevalenceLabel": "Common",
+      "detectability": 2,
+      "detectabilityLabel": "Average",
+      "impact": 1,
+      "impactLabel": "Severe"
     },
     {
       "rank": 2,
       "title": "A3 - Cross-Site Scripting (XSS)",
       "description": "XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or escaping, or updates an existing web page with user supplied data using a browser API that can create JavaScript. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Very Widespread",
-          "severity": 0
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 2,
+      "exploitabilityLabel": "Average",
+      "prevalence": 0,
+      "prevalenceLabel": "Very Widespread",
+      "detectability": 2,
+      "detectabilityLabel": "Average",
+      "impact": 2,
+      "impactLabel": "Moderate"
     },
     {
       "rank": 3,
       "title": "A4 - Broken Access Control",
       "description": "Restrictions on what authenticated users are allowed to do are not properly enforced. Attackers can exploit these flaws to access unauthorized functionality and/or data, such as access other users' accounts, view sensitive files, modify other users’ data, change access rights, etc.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Widespread",
-          "severity": 1
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 1,
+      "exploitabilityLabel": "Easy",
+      "prevalence": 1,
+      "prevalenceLabel": "Widespread",
+      "detectability": 1,
+      "detectabilityLabel": "Easy",
+      "impact": 2,
+      "impactLabel": "Moderate"
     },
     {
       "rank": 4,
       "title": "A5 - Security Misconfiguration",
       "description": "Good security requires having a secure configuration defined and deployed for the application, frameworks, application server, web server, database server, platform, etc. Secure settings should be defined, implemented, and maintained, as defaults are often insecure. Additionally, software should be kept up to date.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Common",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 1,
+      "exploitabilityLabel": "Easy",
+      "prevalence": 2,
+      "prevalenceLabel": "Common",
+      "detectability": 1,
+      "detectabilityLabel": "Easy",
+      "impact": 2,
+      "impactLabel": "Moderate"
     },
     {
       "rank": 5,
       "title": "A6 - Sensitive Data Exposure",
       "description": "Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and PII. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive data deserves extra protection such as encryption at rest or in transit, as well as special precautions when exchanged with the browser.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Difficult",
-          "severity": 3
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Uncommon",
-          "severity": 3
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Severe",
-          "severity": 1
-        }
-      ]
+      "exploitability": 3,
+      "exploitabilityLabel": "Difficult",
+      "prevalence": 3,
+      "prevalenceLabel": "Uncommon",
+      "detectability": 2,
+      "detectabilityLabel": "Average",
+      "impact": 1,
+      "impactLabel": "Severe"
     },
     {
       "rank": 6,
       "title": "A7 - Insufficient Attack Protection",
       "description": "The majority of applications and APIs lack the basic ability to detect, prevent, and respond to both manual and automated attacks. Attack protection goes far beyond basic input validation and involves automatically detecting, logging, responding, and even blocking exploit attempts. Application owners also need to be able to deploy patches quickly to protect against attacks.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Common",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 1,
+      "exploitabilityLabel": "Easy",
+      "prevalence": 2,
+      "prevalenceLabel": "Common",
+      "detectability": 2,
+      "detectabilityLabel": "Average",
+      "impact": 2,
+      "impactLabel": "Moderate"
     },
     {
       "rank": 7,
       "title": "A8 - Cross-Site Request Forgery (CSRF)",
       "description": "A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. Such an attack allows the attacker to force a victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Uncommon",
-          "severity": 3
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Easy",
-          "severity": 1
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 2,
+      "exploitabilityLabel": "Average",
+      "prevalence": 3,
+      "prevalenceLabel": "Uncommon",
+      "detectability": 1,
+      "detectabilityLabel": "Easy",
+      "impact": 2,
+      "impactLabel": "Moderate"
     },
     {
       "rank": 8,
       "title": "A9 - Using Components with Known Vulnerabilities",
       "description": "Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application. If a vulnerable component is exploited, such an attack can facilitate serious data loss or server takeover. Applications and APIs using components with known vulnerabilities may undermine application defenses and enable various attacks and impacts.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Common",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 2,
+      "exploitabilityLabel": "Average",
+      "prevalence": 2,
+      "prevalenceLabel": "Common",
+      "detectability": 2,
+      "detectabilityLabel": "Average",
+      "impact": 2,
+      "impactLabel": "Moderate"
     },
     {
       "rank": 9,
       "title": "A10 - Underprotected APIs",
       "description": "Modern applications often involve rich client applications and APIs, such as JavaScript in the browser and mobile apps, that connect to an API of some kind (SOAP/XML, REST/JSON, RPC, GWT, etc.). These APIs are often unprotected and contain numerous vulnerabilities.",
-      "ratings": [
-        {
-          "category": "Attack Vectors",
-          "title": "Exploitability",
-          "value": "Average",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Prevalence",
-          "value": "Common",
-          "severity": 2
-        },
-        {
-          "category": "Security Weakness",
-          "title": "Detectability",
-          "value": "Difficult",
-          "severity": 3
-        },
-        {
-          "category": "Technical Impacts",
-          "title": "Impact",
-          "value": "Moderate",
-          "severity": 2
-        }
-      ]
+      "exploitability": 2,
+      "exploitabilityLabel": "Average",
+      "prevalence": 2,
+      "prevalenceLabel": "Common",
+      "detectability": 3,
+      "detectabilityLabel": "Difficult",
+      "impact": 2,
+      "impactLabel": "Moderate"
     }
   ]
 }
