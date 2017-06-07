@@ -1,9 +1,14 @@
-<nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ $ctrl.name }}</a></h1>
-  </div>
-  <div class="nav-links">
-    <span><a ui-sref="risks">risks</a></span>
-    <span><a ui-sref="about">about</a></span>
-  </div>
+<nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+  
+  <a class="pure-menu-heading" ui-sref="home">OWASP</a>
+  
+  <ul class="pure-menu-list">
+  	<li class="pure-menu-item">
+  		<a class="pure-menu-link" ui-sref="risks">risks</a>
+  	</li>
+  	<li class="pure-menu-item">
+  		<a class="pure-menu-link" ui-sref="about">about</a>
+  	</li>
+  </ul>
+
 </nav>
