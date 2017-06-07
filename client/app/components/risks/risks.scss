@@ -1,3 +1,22 @@
-.risks {
-  color: red;
+.risks-table {
+	font-size: 15px;
+
+	th.title { min-width: 250px; }
+	th.data { min-width: 170px; }
+	th.colspan { text-align: center; }
+
+	tbody { background-color: #fff; }
+
+	td.highlighted { background-color: #fbf8d8; }
+	td.title { font-weight: bold; }
+	
+	i { 
+		position: relative;
+		top: 4px;
+		font-size: 20px;
+		color: #999;
+
+	}
+	i.high { color: red; }
+	
 }

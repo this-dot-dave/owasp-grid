@@ -1,11 +1,43 @@
-@import '../common';
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
 
-.hero {
-  background-color: $darkBgColor;
-  height: 50rem;
-  padding: 3rem;
-
-  * {
-    color: $lightTextColor;
-  }
+.splash-container {
+    background: #1f8dd6;
+    padding: 50px 0;
 }
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* This is the main heading that appears on the blue section */
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+/* This is the subheading that appears on the blue section */
+.splash-subhead {
+    color: white;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+/* Override .pure-img */
+.splash-logo {
+	display: inline-block !important;
+}
+

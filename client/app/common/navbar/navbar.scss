@@ -1,23 +1,38 @@
-//@import '../common';
 /*
-.navbar {
-  height: 6.5rem;
-  background-color: $primaryColor;
-  padding: 1rem;
+ * -- MENU STYLES --
+ * customize how .pure-menu looks at the top of the page
+ */
 
-  .nav-links,
-  .logo {
-    display: inline-block;
-  }
-
-  .logo {
-    color: $lightTextColor;
-    margin-right: 50%;
-  }
-
-  .nav-links span {
-    color: $lightTextColor;
-    font-size: 1.6rem;
-  }
+.home-menu {
+  padding: 0.5em;
+    text-align: center;
+    background: #2d3e50;
+    box-shadow: rgba(0,0,0,.7) 0 2px 2px 0;
 }
-*/
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.home-menu a {
+    color: #6FBEF3;
+    font-size: 18px;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}

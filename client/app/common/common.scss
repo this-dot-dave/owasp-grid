@@ -2,7 +2,7 @@
 
 $primaryColor:   #0277bd;
 $accentColor:    #1de9b6;
-$bgColor:        #efefef;
+$bgColor:        #f5f5f5;
 $darkBgColor:    #263238;
 $lightBgColor:   #37474f;
 $lightTextColor: #f5f5f5;
@@ -15,13 +15,23 @@ $darkTextColor:  #212121;
     box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+	color: $primaryColor;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
 body {
     line-height: 1.7em;
-    color: #7f8c8d;
+    color: $darkTextColor;
     font-size: 13px;
 }
 
@@ -32,7 +42,7 @@ h4,
 h5,
 h6,
 label {
-    color: $lightTextColor;
+    color: $darkTextColor;
 }
 
 .pure-img-responsive {
@@ -93,93 +103,8 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
-/*
- * -- MENU STYLES --
- * I want to customize how my .pure-menu looks at the top of the page
- */
-
-.home-menu {
-    padding: 0.5em;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
-.home-menu {
-    background: #2d3e50;
-}
-.pure-menu.pure-menu-fixed {
-    /* Fixed menus normally have a border at the bottom. */
-    border-bottom: none;
-    /* I need a higher z-index here because of the scroll-over effect. */
-    z-index: 4;
-}
-
-.home-menu .pure-menu-heading {
-    color: white;
-    font-weight: 400;
-    font-size: 120%;
-}
-
-.home-menu .pure-menu-selected a {
-    color: white;
-}
-
-.home-menu a {
-    color: #6FBEF3;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #AECFE5;
-}
 
 
-/*
- * -- SPLASH STYLES --
- * This is the blue top section that appears on the page.
- */
-
-.splash-container {
-    background: #1f8dd6;
-    z-index: 1;
-    overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
-    width: 100%;
-    height: 88%;
-    top: 0;
-    left: 0;
-    position: fixed !important;
-}
-
-.splash {
-    /* absolute center .splash within .splash-container */
-    width: 80%;
-    height: 50%;
-    margin: auto;
-    position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/* This is the main heading that appears on the blue section */
-.splash-head {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    border: 3px solid white;
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-}
-
-/* This is the subheading that appears on the blue section */
-.splash-subhead {
-    color: white;
-    letter-spacing: 0.05em;
-    opacity: 0.8;
-}
 
 /*
  * -- CONTENT STYLES --
@@ -198,7 +123,7 @@ a.pure-button-primary {
 
 /* We want to give the content area some more padding */
 .content {
-    padding: 1em 1em 3em;
+    padding: 2em 3em 3em;
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -218,23 +143,13 @@ a.pure-button-primary {
 .content-subhead {
     color: #1f8dd6;
 }
-    .content-subhead i {
-        margin-right: 7px;
-    }
-
-/* This is the class used for the dark-background areas. */
-.ribbon {
-    background: #2d3e50;
-    color: #aaa;
+.content-subhead i {
+    margin-right: 7px;
 }
 
-/* This is the class used for the footer */
-.footer {
-    background: #111;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
+
+// TODO: re-factor media queries into component .scss files
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
@@ -293,7 +208,12 @@ a.pure-button-primary {
     }
 }
 
-/*self-hosted-material.css*/
+
+/*
+ * -- MATERIAL DESIGN --
+ * self-hosted-material.css
+ */
+/**/
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
